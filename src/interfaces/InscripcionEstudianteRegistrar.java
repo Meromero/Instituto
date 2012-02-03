@@ -8,20 +8,19 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
-public class InscripcionEstudianteNuevo extends javax.swing.JDialog {
+public class InscripcionEstudianteRegistrar extends javax.swing.JDialog {
     GestorBD bd;
     Modulo modulo;
     int idEstudiante;
     int idModulo;
     
     
-    public InscripcionEstudianteNuevo() {
+    public InscripcionEstudianteRegistrar() {
         initComponents();
         bd = new GestorBD(); 
         bd.getConnection();  
         idEstudiante = -1;
         idModulo = -1;
-        
     }
   
     public void cerrarVentana() {
@@ -42,7 +41,6 @@ public class InscripcionEstudianteNuevo extends javax.swing.JDialog {
         jLabelApellidoPaterno1 = new javax.swing.JLabel();
         jTextFieldNivel = new javax.swing.JTextField();
         jTextFieldCurso = new javax.swing.JTextField();
-        jTextFieldID1 = new javax.swing.JTextField();
         jButtonBuscarModulo = new javax.swing.JButton();
         jTextFieldModalidad = new javax.swing.JTextField();
         jLabelApellidoMaterno1 = new javax.swing.JLabel();
@@ -55,7 +53,6 @@ public class InscripcionEstudianteNuevo extends javax.swing.JDialog {
         jLabelApellidoPaterno = new javax.swing.JLabel();
         jTextFieldNombre = new javax.swing.JTextField();
         jTextFieldApellidoPaterno = new javax.swing.JTextField();
-        jTextFieldID = new javax.swing.JTextField();
         jButtonBuscarEstudiante = new javax.swing.JButton();
         jButtonGuardar = new javax.swing.JButton();
         jButtonCancelar = new javax.swing.JButton();
@@ -71,14 +68,17 @@ public class InscripcionEstudianteNuevo extends javax.swing.JDialog {
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Modulo"));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabelNombre1.setText("Nivel (A1,B,C)");
+        jLabelNombre1.setText("Nivel");
         jPanel2.add(jLabelNombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, -1));
 
         jLabelApellidoPaterno1.setText("Curso");
         jPanel2.add(jLabelApellidoPaterno1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, -1, -1));
+
+        jTextFieldNivel.setEditable(false);
         jPanel2.add(jTextFieldNivel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 220, -1));
+
+        jTextFieldCurso.setEditable(false);
         jPanel2.add(jTextFieldCurso, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 220, -1));
-        jPanel2.add(jTextFieldID1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 40, 50, -1));
 
         jButtonBuscarModulo.setText("Buscar");
         jButtonBuscarModulo.addActionListener(new java.awt.event.ActionListener() {
@@ -87,13 +87,17 @@ public class InscripcionEstudianteNuevo extends javax.swing.JDialog {
             }
         });
         jPanel2.add(jButtonBuscarModulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 80, -1, -1));
+
+        jTextFieldModalidad.setEditable(false);
         jPanel2.add(jTextFieldModalidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 30, 220, -1));
 
-        jLabelApellidoMaterno1.setText("Modalidad (extens o reg)");
+        jLabelApellidoMaterno1.setText("Modalidad");
         jPanel2.add(jLabelApellidoMaterno1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
 
-        jLabelApellidoMaterno2.setText("Tipo (jovenes,part,niv)");
+        jLabelApellidoMaterno2.setText("Tipo");
         jPanel2.add(jLabelApellidoMaterno2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, -1));
+
+        jTextFieldTipo.setEditable(false);
         jPanel2.add(jTextFieldTipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, 220, -1));
 
         jPanelFondo.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 560, 170));
@@ -107,13 +111,18 @@ public class InscripcionEstudianteNuevo extends javax.swing.JDialog {
 
         jLabelApellidoMaterno.setText("Apellido Materno");
         jPanel1.add(jLabelApellidoMaterno, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, -1, -1));
+
+        jTextFieldApellidoMaterno.setEditable(false);
         jPanel1.add(jTextFieldApellidoMaterno, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 220, -1));
 
         jLabelApellidoPaterno.setText("Apellido Paterno");
         jPanel1.add(jLabelApellidoPaterno, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
+
+        jTextFieldNombre.setEditable(false);
         jPanel1.add(jTextFieldNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, 220, -1));
+
+        jTextFieldApellidoPaterno.setEditable(false);
         jPanel1.add(jTextFieldApellidoPaterno, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, 220, -1));
-        jPanel1.add(jTextFieldID, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 40, 50, -1));
 
         jButtonBuscarEstudiante.setText("Buscar");
         jButtonBuscarEstudiante.addActionListener(new java.awt.event.ActionListener() {
@@ -125,19 +134,18 @@ public class InscripcionEstudianteNuevo extends javax.swing.JDialog {
 
         jPanelFondo.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 560, 160));
 
-        jButtonGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/guardar1.JPG"))); // NOI18N
+        jButtonGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/inscripcion.jpg"))); // NOI18N
         jButtonGuardar.setText("Inscribir");
         jButtonGuardar.setBorderPainted(false);
         jButtonGuardar.setContentAreaFilled(false);
         jButtonGuardar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButtonGuardar.setOpaque(false);
         jButtonGuardar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jButtonGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonGuardarActionPerformed(evt);
             }
         });
-        jPanelFondo.add(jButtonGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 410, 160, 90));
+        jPanelFondo.add(jButtonGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 390, 160, 130));
 
         jButtonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cancelar2.jpg"))); // NOI18N
         jButtonCancelar.setText("Cancelar");
@@ -150,7 +158,7 @@ public class InscripcionEstudianteNuevo extends javax.swing.JDialog {
                 jButtonCancelarActionPerformed(evt);
             }
         });
-        jPanelFondo.add(jButtonCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, 160, 90));
+        jPanelFondo.add(jButtonCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 400, 160, 130));
 
         getContentPane().add(jPanelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, 540));
 
@@ -163,7 +171,7 @@ public class InscripcionEstudianteNuevo extends javax.swing.JDialog {
         buscar.setVisible(true); 
        
         idEstudiante = buscar.alumno;
-        jTextFieldID.setText(String.valueOf(idEstudiante));
+        //jTextFieldID.setText(String.valueOf(idEstudiante));
        
         try {
             //System.out.println(fila);
@@ -193,7 +201,7 @@ public class InscripcionEstudianteNuevo extends javax.swing.JDialog {
         buscar.setVisible(true); 
        
         idModulo = buscar.modulo;
-        jTextFieldID1.setText(String.valueOf(idModulo));
+        //jTextFieldID1.setText(String.valueOf(idModulo));
         
         try {
             ResultSet rs = bd.consulta("SELECT * FROM `icba`.`modulo` WHERE idModulo = "+idModulo);
@@ -320,8 +328,6 @@ public class InscripcionEstudianteNuevo extends javax.swing.JDialog {
     private javax.swing.JTextField jTextFieldApellidoMaterno;
     private javax.swing.JTextField jTextFieldApellidoPaterno;
     private javax.swing.JTextField jTextFieldCurso;
-    private javax.swing.JTextField jTextFieldID;
-    private javax.swing.JTextField jTextFieldID1;
     private javax.swing.JTextField jTextFieldModalidad;
     private javax.swing.JTextField jTextFieldNivel;
     private javax.swing.JTextField jTextFieldNombre;

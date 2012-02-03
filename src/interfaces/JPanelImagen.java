@@ -1,29 +1,13 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/*
- * JPanelImagen.java
- *
- * Created on Sep 28, 2011, 1:18:23 PM
- */
-
 package interfaces;
 
 import java.awt.Dimension;
 import java.awt.Graphics;
 import javax.swing.ImageIcon;
 
-/**
- *
- * @author General
- */
-public class JPanelImagen extends javax.swing.JPanel {
 
+public class JPanelImagen extends javax.swing.JPanel {
     ImageIcon imagen;
 
-    /** Creates new form JPanel */
     public JPanelImagen(String nombre) {
         initComponents();
         imagen = new ImageIcon(getClass().getResource(nombre));
@@ -56,5 +40,4 @@ public class JPanelImagen extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables
-
 }

@@ -19,221 +19,168 @@ public class PrincipalICBA extends javax.swing.JFrame {
     }
     @Override
     public Image getIconImage(){
-        Image imagen=Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("Imagenes/Iconoicba1.png"));
+        //Image imagen=Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("Imagenes/Iconoicba1.png"));
+        Image imagen=Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("Imagenes/IcbaPeq.jpg"));
         return imagen;
     }
 
-    public void  Bloquear()
-    {
+    public void  Bloquear(){
         //MenuCaja.setEnabled(false);
     }
 
     @SuppressWarnings("unchecked")
     private void initComponents() {//GEN-BEGIN:initComponents
 
-        jToolBar1 = new javax.swing.JToolBar();
-        Nuevoestudiante = new javax.swing.JButton();
-        Inscripcion = new javax.swing.JButton();
-        BotonBarraPagar = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem25 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenuItem39 = new javax.swing.JMenuItem();
-        jMenuItem40 = new javax.swing.JMenuItem();
-        jMenuItem41 = new javax.swing.JMenuItem();
-        jMenuItem45 = new javax.swing.JMenuItem();
-        MenuCertificado = new javax.swing.JMenu();
-        jMenuItem20 = new javax.swing.JMenuItem();
-        jMenuItem52 = new javax.swing.JMenuItem();
+        MenuArchivo = new javax.swing.JMenu();
+        Estadisticas = new javax.swing.JMenuItem();
+        MenuNotificaciones = new javax.swing.JMenu();
+        NotificacionesProgramar = new javax.swing.JMenuItem();
+        NotificacionesModificar = new javax.swing.JMenuItem();
+        NotificacionesEliminar = new javax.swing.JMenuItem();
+        NotificacionesVer = new javax.swing.JMenuItem();
+        MenuCertificados = new javax.swing.JMenu();
+        CertificadosImprimir = new javax.swing.JMenuItem();
+        CertificadosCargar = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         jMenuItem1 = new javax.swing.JMenuItem();
-        MenuEstudiante = new javax.swing.JMenu();
-        RegistrarEstudiante = new javax.swing.JMenuItem();
-        ModificarEstudiante = new javax.swing.JMenuItem();
-        ModificarEstadoEstudiante = new javax.swing.JMenuItem();
-        VerEstudiante = new javax.swing.JMenuItem();
-        MenuInscripcion = new javax.swing.JMenu();
-        InscripcionModulo = new javax.swing.JMenuItem();
-        jMenuItem36 = new javax.swing.JMenuItem();
-        jMenuItem37 = new javax.swing.JMenuItem();
-        jMenuItem38 = new javax.swing.JMenuItem();
-        MenuCaja = new javax.swing.JMenu();
-        jMenu15 = new javax.swing.JMenu();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenuItem7 = new javax.swing.JMenuItem();
-        jMenuItem30 = new javax.swing.JMenuItem();
-        jMenuItem42 = new javax.swing.JMenuItem();
-        jMenu16 = new javax.swing.JMenu();
-        jMenuItem23 = new javax.swing.JMenuItem();
-        jMenuItem24 = new javax.swing.JMenuItem();
-        jMenuItem43 = new javax.swing.JMenuItem();
-        jMenuItem44 = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
-        jMenuItem48 = new javax.swing.JMenuItem();
-        jMenuItem49 = new javax.swing.JMenuItem();
-        jMenuItem50 = new javax.swing.JMenuItem();
-        jMenuItem51 = new javax.swing.JMenuItem();
-        MenuAsistencia = new javax.swing.JMenu();
-        jMenuItem21 = new javax.swing.JMenuItem();
-        jMenuItem22 = new javax.swing.JMenuItem();
-        jMenuItem46 = new javax.swing.JMenuItem();
-        jMenuItem47 = new javax.swing.JMenuItem();
-        MenuModulos = new javax.swing.JMenu();
-        jMenu7 = new javax.swing.JMenu();
-        jMenuItem14 = new javax.swing.JMenuItem();
-        jMenuItem15 = new javax.swing.JMenuItem();
-        jMenuItem28 = new javax.swing.JMenuItem();
-        jMenuItem34 = new javax.swing.JMenuItem();
-        jMenu10 = new javax.swing.JMenu();
-        jMenuItem9 = new javax.swing.JMenuItem();
-        jMenuItem13 = new javax.swing.JMenuItem();
-        jMenuItem29 = new javax.swing.JMenuItem();
-        jMenuItem35 = new javax.swing.JMenuItem();
-        MenuHorarioyAula = new javax.swing.JMenu();
-        jMenu12 = new javax.swing.JMenu();
-        RegistrarHorario = new javax.swing.JMenuItem();
-        ModificarHorario = new javax.swing.JMenuItem();
-        ModificarEstadoHorario = new javax.swing.JMenuItem();
-        VerHorario = new javax.swing.JMenuItem();
-        jMenu13 = new javax.swing.JMenu();
-        RegistrarAula = new javax.swing.JMenuItem();
-        ModificarAula = new javax.swing.JMenuItem();
-        ModificarEstadoAula = new javax.swing.JMenuItem();
-        VerAula = new javax.swing.JMenuItem();
         MenuUsuario = new javax.swing.JMenu();
-        jMenuItem8 = new javax.swing.JMenuItem();
-        ModificarUsuario = new javax.swing.JMenuItem();
-        ModificarEstadoUsuario = new javax.swing.JMenuItem();
-        VerUsuario = new javax.swing.JMenuItem();
+        UsuarioRegistrar = new javax.swing.JMenuItem();
+        UsuarioModificar = new javax.swing.JMenuItem();
+        UsuarioModificarEstado = new javax.swing.JMenuItem();
+        UsuarioVer = new javax.swing.JMenuItem();
+        MenuEstudiante = new javax.swing.JMenu();
+        EstudianteRegistrar = new javax.swing.JMenuItem();
+        EstudianteModificar = new javax.swing.JMenuItem();
+        EstudianteModificarEstado = new javax.swing.JMenuItem();
+        EstudianteVer = new javax.swing.JMenuItem();
+        MenuInscripcion = new javax.swing.JMenu();
+        InscripcionRegistrar = new javax.swing.JMenuItem();
+        InscripcionModificar = new javax.swing.JMenuItem();
+        InscripcionModificarEstado = new javax.swing.JMenuItem();
+        InscripcionVer = new javax.swing.JMenuItem();
+        MenuHorarioyAula = new javax.swing.JMenu();
+        MenuHorario = new javax.swing.JMenu();
+        HorarioRegistrar = new javax.swing.JMenuItem();
+        HorarioModificar = new javax.swing.JMenuItem();
+        HorarioModificarEstado = new javax.swing.JMenuItem();
+        HorarioVer = new javax.swing.JMenuItem();
+        MenuAula = new javax.swing.JMenu();
+        AulaRegistrar = new javax.swing.JMenuItem();
+        AulaModificar = new javax.swing.JMenuItem();
+        AulaModificarEstado = new javax.swing.JMenuItem();
+        AulaVer = new javax.swing.JMenuItem();
+        MenuAdministracionModulos = new javax.swing.JMenu();
+        MenuModulo = new javax.swing.JMenu();
+        ModuloCrear = new javax.swing.JMenuItem();
+        ModuloModificar = new javax.swing.JMenuItem();
+        ModuloModificarEstado = new javax.swing.JMenuItem();
+        ModuloVer = new javax.swing.JMenuItem();
+        MenuAsignacion = new javax.swing.JMenu();
+        AsignacionRegistrar = new javax.swing.JMenuItem();
+        AsignacionModificar = new javax.swing.JMenuItem();
+        AsignacionModificarEstado = new javax.swing.JMenuItem();
+        AsignacionVer = new javax.swing.JMenuItem();
+        MenuCaja = new javax.swing.JMenu();
+        MenuPagos = new javax.swing.JMenu();
+        PagosPagarCuota = new javax.swing.JMenuItem();
+        PagosModificarCuota = new javax.swing.JMenuItem();
+        PagosEliminarCuota = new javax.swing.JMenuItem();
+        PagosVerCuota = new javax.swing.JMenuItem();
+        MenuProgramacionPagos = new javax.swing.JMenu();
+        ProgPagosProgramar = new javax.swing.JMenuItem();
+        ProgPagosModificar = new javax.swing.JMenuItem();
+        ProgPagosEliminar = new javax.swing.JMenuItem();
+        ProgPagosVer = new javax.swing.JMenuItem();
+        MenuDescuentos = new javax.swing.JMenu();
+        DescuentosProgramar = new javax.swing.JMenuItem();
+        DescuentosModificar = new javax.swing.JMenuItem();
+        DescuentosEliminar = new javax.swing.JMenuItem();
+        DescuentosVer = new javax.swing.JMenuItem();
+        MenuAsistencia = new javax.swing.JMenu();
+        AsistenciaControl = new javax.swing.JMenuItem();
+        AsistenciaModificar = new javax.swing.JMenuItem();
+        AsistenciaEliminar = new javax.swing.JMenuItem();
+        AsistenciaVer = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("INSTITUTO CULTURAL BOLIVIANO ALEMAN");
+        setTitle("Instituto Cultural Boliviano Alemán");
         setBackground(new java.awt.Color(255, 255, 0));
         setIconImage(getIconImage());
-
-        jToolBar1.setRollover(true);
-
-        Nuevoestudiante.setBackground(new java.awt.Color(255, 51, 0));
-        Nuevoestudiante.setForeground(new java.awt.Color(102, 0, 0));
-        Nuevoestudiante.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BotonNuevoEstudiantePrueba.jpg"))); // NOI18N
-        Nuevoestudiante.setText("Registrar");
-        Nuevoestudiante.setToolTipText("Registrar Estudiante Nuevo");
-        Nuevoestudiante.setFocusable(false);
-        Nuevoestudiante.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        Nuevoestudiante.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        Nuevoestudiante.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NuevoestudianteActionPerformed(evt);
-            }
-        });
-        jToolBar1.add(Nuevoestudiante);
-
-        Inscripcion.setToolTipText("Inscribir Estudiante");
-        Inscripcion.setBackground(new java.awt.Color(255, 51, 0));
-        Inscripcion.setForeground(new java.awt.Color(153, 0, 0));
-        Inscripcion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BotonInscripcionprueba.jpg"))); // NOI18N
-        Inscripcion.setText("Inscripcion");
-        Inscripcion.setFocusable(false);
-        Inscripcion.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        Inscripcion.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        Inscripcion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                InscripcionActionPerformed(evt);
-            }
-        });
-        jToolBar1.add(Inscripcion);
-
-        BotonBarraPagar.setToolTipText("Pagar cuotas");
-        BotonBarraPagar.setBackground(new java.awt.Color(255, 51, 0));
-        BotonBarraPagar.setForeground(new java.awt.Color(153, 0, 0));
-        BotonBarraPagar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BotonPagarPrueba.jpg"))); // NOI18N
-        BotonBarraPagar.setText("Pagar");
-        BotonBarraPagar.setFocusable(false);
-        BotonBarraPagar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        BotonBarraPagar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        BotonBarraPagar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonBarraPagarActionPerformed(evt);
-            }
-        });
-        jToolBar1.add(BotonBarraPagar);
-
-        jButton2.setBackground(new java.awt.Color(255, 51, 0));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BotonAsistenciaPrueba.jpg"))); // NOI18N
-        jButton2.setText("Control");
-        jButton2.setFocusable(false);
-        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton2.setMaximumSize(new java.awt.Dimension(59, 77));
-        jButton2.setMinimumSize(new java.awt.Dimension(55, 75));
-        jButton2.setPreferredSize(new java.awt.Dimension(59, 77));
-        jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToolBar1.add(jButton2);
 
         jMenuBar1.setBackground(new java.awt.Color(255, 204, 102));
         jMenuBar1.setForeground(new java.awt.Color(153, 0, 0));
 
-        jMenu1.setBackground(new java.awt.Color(255, 204, 102));
-        jMenu1.setForeground(new java.awt.Color(153, 0, 0));
-        jMenu1.setText("Archivo");
+        MenuArchivo.setBackground(new java.awt.Color(255, 204, 102));
+        MenuArchivo.setForeground(new java.awt.Color(153, 0, 0));
+        MenuArchivo.setText("Archivo");
 
-        jMenuItem25.setBackground(new java.awt.Color(254, 204, 102));
-        jMenuItem25.setText("Estadisticas");
-        jMenuItem25.addActionListener(new java.awt.event.ActionListener() {
+        Estadisticas.setBackground(new java.awt.Color(254, 204, 102));
+        Estadisticas.setText("Estadisticas");
+        Estadisticas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem25ActionPerformed(evt);
+                EstadisticasActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem25);
+        MenuArchivo.add(Estadisticas);
 
-        jMenu2.setText("Notificaciones");
+        MenuNotificaciones.setBackground(new java.awt.Color(254, 204, 102));
+        MenuNotificaciones.setForeground(new java.awt.Color(153, 0, 0));
+        MenuNotificaciones.setText("Notificaciones");
 
-        jMenuItem39.setText("Programar");
-        jMenuItem39.addActionListener(new java.awt.event.ActionListener() {
+        NotificacionesProgramar.setBackground(new java.awt.Color(254, 204, 102));
+        NotificacionesProgramar.setText("Programar");
+        NotificacionesProgramar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem39ActionPerformed(evt);
+                NotificacionesProgramarActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem39);
+        MenuNotificaciones.add(NotificacionesProgramar);
 
-        jMenuItem40.setText("Modificar");
-        jMenuItem40.addActionListener(new java.awt.event.ActionListener() {
+        NotificacionesModificar.setBackground(new java.awt.Color(254, 204, 102));
+        NotificacionesModificar.setText("Modificar");
+        NotificacionesModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem40ActionPerformed(evt);
+                NotificacionesModificarActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem40);
+        MenuNotificaciones.add(NotificacionesModificar);
 
-        jMenuItem41.setText("Eliminar");
-        jMenu2.add(jMenuItem41);
+        NotificacionesEliminar.setBackground(new java.awt.Color(254, 204, 102));
+        NotificacionesEliminar.setText("Eliminar");
+        MenuNotificaciones.add(NotificacionesEliminar);
 
-        jMenuItem45.setText("Ver");
-        jMenu2.add(jMenuItem45);
+        NotificacionesVer.setBackground(new java.awt.Color(254, 204, 102));
+        NotificacionesVer.setText("Ver");
+        MenuNotificaciones.add(NotificacionesVer);
 
-        jMenu1.add(jMenu2);
+        MenuArchivo.add(MenuNotificaciones);
 
-        MenuCertificado.setText("Certificados");
+        MenuCertificados.setBackground(new java.awt.Color(254, 204, 102));
+        MenuCertificados.setForeground(new java.awt.Color(153, 0, 0));
+        MenuCertificados.setText("Certificados");
+        MenuCertificados.setContentAreaFilled(false);
 
-        jMenuItem20.setBackground(new java.awt.Color(254, 204, 102));
-        jMenuItem20.setText("Imprimir");
-        jMenuItem20.addActionListener(new java.awt.event.ActionListener() {
+        CertificadosImprimir.setBackground(new java.awt.Color(254, 204, 102));
+        CertificadosImprimir.setText("Imprimir");
+        CertificadosImprimir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem20ActionPerformed(evt);
+                CertificadosImprimirActionPerformed(evt);
             }
         });
-        MenuCertificado.add(jMenuItem20);
+        MenuCertificados.add(CertificadosImprimir);
 
-        jMenuItem52.setText("Cargar Certificados");
-        jMenuItem52.addActionListener(new java.awt.event.ActionListener() {
+        CertificadosCargar.setBackground(new java.awt.Color(254, 204, 102));
+        CertificadosCargar.setText("Cargar Certificados");
+        CertificadosCargar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem52ActionPerformed(evt);
+                CertificadosCargarActionPerformed(evt);
             }
         });
-        MenuCertificado.add(jMenuItem52);
+        MenuCertificados.add(CertificadosCargar);
 
-        jMenu1.add(MenuCertificado);
-        jMenu1.add(jSeparator1);
+        MenuArchivo.add(MenuCertificados);
+        MenuArchivo.add(jSeparator1);
 
         jMenuItem1.setBackground(new java.awt.Color(254, 204, 102));
         jMenuItem1.setText("Salir");
@@ -242,348 +189,9 @@ public class PrincipalICBA extends javax.swing.JFrame {
                 jMenuItem1ActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem1);
+        MenuArchivo.add(jMenuItem1);
 
-        jMenuBar1.add(jMenu1);
-
-        MenuEstudiante.setForeground(new java.awt.Color(153, 0, 0));
-        MenuEstudiante.setText("Gestion Estudiante");
-        MenuEstudiante.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MenuEstudianteActionPerformed(evt);
-            }
-        });
-
-        RegistrarEstudiante.setBackground(new java.awt.Color(254, 204, 102));
-        RegistrarEstudiante.setText("Registrar");
-        RegistrarEstudiante.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RegistrarEstudianteActionPerformed(evt);
-            }
-        });
-        MenuEstudiante.add(RegistrarEstudiante);
-
-        ModificarEstudiante.setBackground(new java.awt.Color(254, 204, 102));
-        ModificarEstudiante.setText("Modificar");
-        ModificarEstudiante.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ModificarEstudianteActionPerformed(evt);
-            }
-        });
-        MenuEstudiante.add(ModificarEstudiante);
-
-        ModificarEstadoEstudiante.setBackground(new java.awt.Color(254, 204, 102));
-        ModificarEstadoEstudiante.setText("Modificar Estado");
-        ModificarEstadoEstudiante.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ModificarEstadoEstudianteActionPerformed(evt);
-            }
-        });
-        MenuEstudiante.add(ModificarEstadoEstudiante);
-
-        VerEstudiante.setBackground(new java.awt.Color(254, 204, 102));
-        VerEstudiante.setText("Ver");
-        VerEstudiante.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                VerEstudianteActionPerformed(evt);
-            }
-        });
-        MenuEstudiante.add(VerEstudiante);
-
-        jMenuBar1.add(MenuEstudiante);
-
-        MenuInscripcion.setBackground(new java.awt.Color(254, 204, 102));
-        MenuInscripcion.setForeground(new java.awt.Color(153, 0, 0));
-        MenuInscripcion.setText("Gestion Inscripciones");
-
-        InscripcionModulo.setBackground(new java.awt.Color(254, 204, 102));
-        InscripcionModulo.setText("Inscribir");
-        InscripcionModulo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                InscripcionModuloActionPerformed(evt);
-            }
-        });
-        MenuInscripcion.add(InscripcionModulo);
-
-        jMenuItem36.setBackground(new java.awt.Color(254, 204, 102));
-        jMenuItem36.setText("Modificar");
-        MenuInscripcion.add(jMenuItem36);
-
-        jMenuItem37.setBackground(new java.awt.Color(254, 204, 102));
-        jMenuItem37.setText("Eliminar");
-        MenuInscripcion.add(jMenuItem37);
-
-        jMenuItem38.setBackground(new java.awt.Color(254, 204, 102));
-        jMenuItem38.setText("Ver");
-        MenuInscripcion.add(jMenuItem38);
-
-        jMenuBar1.add(MenuInscripcion);
-
-        MenuCaja.setForeground(new java.awt.Color(153, 0, 0));
-        MenuCaja.setText("Gestion Caja");
-        MenuCaja.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MenuCajaActionPerformed(evt);
-            }
-        });
-
-        jMenu15.setBackground(new java.awt.Color(254, 204, 102));
-        jMenu15.setText("Pagos");
-
-        jMenuItem6.setBackground(new java.awt.Color(254, 204, 102));
-        jMenuItem6.setText("Pagar Cuota");
-        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem6ActionPerformed(evt);
-            }
-        });
-        jMenu15.add(jMenuItem6);
-
-        jMenuItem7.setBackground(new java.awt.Color(254, 204, 102));
-        jMenuItem7.setText("Modificar Cuota");
-        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem7ActionPerformed(evt);
-            }
-        });
-        jMenu15.add(jMenuItem7);
-
-        jMenuItem30.setBackground(new java.awt.Color(254, 204, 102));
-        jMenuItem30.setText("Eliminar Cuota");
-        jMenu15.add(jMenuItem30);
-
-        jMenuItem42.setBackground(new java.awt.Color(254, 204, 102));
-        jMenuItem42.setText("Ver Cuotas");
-        jMenu15.add(jMenuItem42);
-
-        MenuCaja.add(jMenu15);
-
-        jMenu16.setBackground(new java.awt.Color(254, 204, 102));
-        jMenu16.setText("Programacion Pagos");
-
-        jMenuItem23.setBackground(new java.awt.Color(254, 204, 102));
-        jMenuItem23.setText("Programar");
-        jMenuItem23.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem23ActionPerformed(evt);
-            }
-        });
-        jMenu16.add(jMenuItem23);
-
-        jMenuItem24.setBackground(new java.awt.Color(254, 204, 102));
-        jMenuItem24.setText("Modificar");
-        jMenu16.add(jMenuItem24);
-
-        jMenuItem43.setBackground(new java.awt.Color(254, 204, 102));
-        jMenuItem43.setText("Eliminar");
-        jMenu16.add(jMenuItem43);
-
-        jMenuItem44.setBackground(new java.awt.Color(254, 204, 102));
-        jMenuItem44.setText("Ver");
-        jMenu16.add(jMenuItem44);
-
-        MenuCaja.add(jMenu16);
-
-        jMenu3.setText("Descuentos");
-
-        jMenuItem48.setText("Programar ");
-        jMenuItem48.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem48ActionPerformed(evt);
-            }
-        });
-        jMenu3.add(jMenuItem48);
-
-        jMenuItem49.setText("Modificar");
-        jMenu3.add(jMenuItem49);
-
-        jMenuItem50.setText("Eliminar");
-        jMenu3.add(jMenuItem50);
-
-        jMenuItem51.setText("Ver");
-        jMenu3.add(jMenuItem51);
-
-        MenuCaja.add(jMenu3);
-
-        jMenuBar1.add(MenuCaja);
-
-        MenuAsistencia.setBackground(new java.awt.Color(254, 204, 102));
-        MenuAsistencia.setForeground(new java.awt.Color(153, 0, 0));
-        MenuAsistencia.setText("Gestion Asistencia");
-
-        jMenuItem21.setBackground(new java.awt.Color(254, 204, 102));
-        jMenuItem21.setText("Control ");
-        jMenuItem21.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem21ActionPerformed(evt);
-            }
-        });
-        MenuAsistencia.add(jMenuItem21);
-
-        jMenuItem22.setBackground(new java.awt.Color(254, 204, 102));
-        jMenuItem22.setText("Modificar");
-        MenuAsistencia.add(jMenuItem22);
-
-        jMenuItem46.setBackground(new java.awt.Color(254, 204, 102));
-        jMenuItem46.setText("Eliminar");
-        MenuAsistencia.add(jMenuItem46);
-
-        jMenuItem47.setBackground(new java.awt.Color(254, 204, 102));
-        jMenuItem47.setText("Ver");
-        MenuAsistencia.add(jMenuItem47);
-
-        jMenuBar1.add(MenuAsistencia);
-
-        MenuModulos.setForeground(new java.awt.Color(153, 0, 0));
-        MenuModulos.setText("Administracio de Modulos");
-
-        jMenu7.setBackground(new java.awt.Color(254, 204, 102));
-        jMenu7.setText("Gestion Modulo");
-
-        jMenuItem14.setBackground(new java.awt.Color(254, 204, 102));
-        jMenuItem14.setText("Crear");
-        jMenuItem14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem14ActionPerformed(evt);
-            }
-        });
-        jMenu7.add(jMenuItem14);
-
-        jMenuItem15.setBackground(new java.awt.Color(254, 204, 102));
-        jMenuItem15.setText("Modificar");
-        jMenuItem15.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem15ActionPerformed(evt);
-            }
-        });
-        jMenu7.add(jMenuItem15);
-
-        jMenuItem28.setBackground(new java.awt.Color(254, 204, 102));
-        jMenuItem28.setText("Estado");
-        jMenu7.add(jMenuItem28);
-
-        jMenuItem34.setBackground(new java.awt.Color(254, 204, 102));
-        jMenuItem34.setText("Ver");
-        jMenu7.add(jMenuItem34);
-
-        MenuModulos.add(jMenu7);
-
-        jMenu10.setText("Asignacion Modulo");
-
-        jMenuItem9.setBackground(new java.awt.Color(254, 204, 102));
-        jMenuItem9.setText("Asignar");
-        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem9ActionPerformed(evt);
-            }
-        });
-        jMenu10.add(jMenuItem9);
-
-        jMenuItem13.setBackground(new java.awt.Color(254, 204, 102));
-        jMenuItem13.setText("Modificar");
-        jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem13ActionPerformed(evt);
-            }
-        });
-        jMenu10.add(jMenuItem13);
-
-        jMenuItem29.setBackground(new java.awt.Color(254, 204, 102));
-        jMenuItem29.setText("Estado");
-        jMenu10.add(jMenuItem29);
-
-        jMenuItem35.setBackground(new java.awt.Color(254, 204, 102));
-        jMenuItem35.setText("Ver");
-        jMenu10.add(jMenuItem35);
-
-        MenuModulos.add(jMenu10);
-
-        jMenuBar1.add(MenuModulos);
-
-        MenuHorarioyAula.setForeground(new java.awt.Color(153, 0, 0));
-        MenuHorarioyAula.setText("Administrar Horario y Aula");
-
-        jMenu12.setText("Gestion Horario");
-
-        RegistrarHorario.setBackground(new java.awt.Color(254, 204, 102));
-        RegistrarHorario.setText("Crear");
-        RegistrarHorario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RegistrarHorarioActionPerformed(evt);
-            }
-        });
-        jMenu12.add(RegistrarHorario);
-
-        ModificarHorario.setBackground(new java.awt.Color(254, 204, 102));
-        ModificarHorario.setText("Modificar");
-        ModificarHorario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ModificarHorarioActionPerformed(evt);
-            }
-        });
-        jMenu12.add(ModificarHorario);
-
-        ModificarEstadoHorario.setBackground(new java.awt.Color(254, 204, 102));
-        ModificarEstadoHorario.setText("Modificar Estado");
-        ModificarEstadoHorario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ModificarEstadoHorarioActionPerformed(evt);
-            }
-        });
-        jMenu12.add(ModificarEstadoHorario);
-
-        VerHorario.setBackground(new java.awt.Color(254, 204, 102));
-        VerHorario.setText("Ver");
-        VerHorario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                VerHorarioActionPerformed(evt);
-            }
-        });
-        jMenu12.add(VerHorario);
-
-        MenuHorarioyAula.add(jMenu12);
-
-        jMenu13.setText("Gestion Aula");
-
-        RegistrarAula.setBackground(new java.awt.Color(254, 204, 102));
-        RegistrarAula.setText("Crear");
-        RegistrarAula.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RegistrarAulaActionPerformed(evt);
-            }
-        });
-        jMenu13.add(RegistrarAula);
-
-        ModificarAula.setBackground(new java.awt.Color(254, 204, 102));
-        ModificarAula.setText("Modificar");
-        ModificarAula.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ModificarAulaActionPerformed(evt);
-            }
-        });
-        jMenu13.add(ModificarAula);
-
-        ModificarEstadoAula.setBackground(new java.awt.Color(254, 204, 102));
-        ModificarEstadoAula.setText("Modificar Estado");
-        ModificarEstadoAula.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ModificarEstadoAulaActionPerformed(evt);
-            }
-        });
-        jMenu13.add(ModificarEstadoAula);
-
-        VerAula.setBackground(new java.awt.Color(254, 204, 102));
-        VerAula.setText("Ver");
-        VerAula.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                VerAulaActionPerformed(evt);
-            }
-        });
-        jMenu13.add(VerAula);
-
-        MenuHorarioyAula.add(jMenu13);
-
-        jMenuBar1.add(MenuHorarioyAula);
+        jMenuBar1.add(MenuArchivo);
 
         MenuUsuario.setBackground(new java.awt.Color(254, 204, 102));
         MenuUsuario.setForeground(new java.awt.Color(153, 0, 0));
@@ -594,43 +202,406 @@ public class PrincipalICBA extends javax.swing.JFrame {
             }
         });
 
-        jMenuItem8.setBackground(new java.awt.Color(254, 204, 102));
-        jMenuItem8.setText("Resgistrar ");
-        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+        UsuarioRegistrar.setBackground(new java.awt.Color(254, 204, 102));
+        UsuarioRegistrar.setText("Resgistrar ");
+        UsuarioRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem8ActionPerformed(evt);
+                UsuarioRegistrarActionPerformed(evt);
             }
         });
-        MenuUsuario.add(jMenuItem8);
+        MenuUsuario.add(UsuarioRegistrar);
 
-        ModificarUsuario.setBackground(new java.awt.Color(254, 204, 102));
-        ModificarUsuario.setText("Modificar");
-        ModificarUsuario.addActionListener(new java.awt.event.ActionListener() {
+        UsuarioModificar.setBackground(new java.awt.Color(254, 204, 102));
+        UsuarioModificar.setText("Modificar");
+        UsuarioModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ModificarUsuarioActionPerformed(evt);
+                UsuarioModificarActionPerformed(evt);
             }
         });
-        MenuUsuario.add(ModificarUsuario);
+        MenuUsuario.add(UsuarioModificar);
 
-        ModificarEstadoUsuario.setBackground(new java.awt.Color(254, 204, 102));
-        ModificarEstadoUsuario.setText("Modificar Estado");
-        ModificarEstadoUsuario.addActionListener(new java.awt.event.ActionListener() {
+        UsuarioModificarEstado.setBackground(new java.awt.Color(254, 204, 102));
+        UsuarioModificarEstado.setText("Modificar Estado");
+        UsuarioModificarEstado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ModificarEstadoUsuarioActionPerformed(evt);
+                UsuarioModificarEstadoActionPerformed(evt);
             }
         });
-        MenuUsuario.add(ModificarEstadoUsuario);
+        MenuUsuario.add(UsuarioModificarEstado);
 
-        VerUsuario.setBackground(new java.awt.Color(254, 204, 102));
-        VerUsuario.setText("Ver");
-        VerUsuario.addActionListener(new java.awt.event.ActionListener() {
+        UsuarioVer.setBackground(new java.awt.Color(254, 204, 102));
+        UsuarioVer.setText("Ver");
+        UsuarioVer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                VerUsuarioActionPerformed(evt);
+                UsuarioVerActionPerformed(evt);
             }
         });
-        MenuUsuario.add(VerUsuario);
+        MenuUsuario.add(UsuarioVer);
 
         jMenuBar1.add(MenuUsuario);
+
+        MenuEstudiante.setBackground(new java.awt.Color(254, 204, 102));
+        MenuEstudiante.setForeground(new java.awt.Color(153, 0, 0));
+        MenuEstudiante.setText("Gestion Estudiante");
+        MenuEstudiante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuEstudianteActionPerformed(evt);
+            }
+        });
+
+        EstudianteRegistrar.setBackground(new java.awt.Color(254, 204, 102));
+        EstudianteRegistrar.setText("Registrar");
+        EstudianteRegistrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EstudianteRegistrarActionPerformed(evt);
+            }
+        });
+        MenuEstudiante.add(EstudianteRegistrar);
+
+        EstudianteModificar.setBackground(new java.awt.Color(254, 204, 102));
+        EstudianteModificar.setText("Modificar");
+        EstudianteModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EstudianteModificarActionPerformed(evt);
+            }
+        });
+        MenuEstudiante.add(EstudianteModificar);
+
+        EstudianteModificarEstado.setBackground(new java.awt.Color(254, 204, 102));
+        EstudianteModificarEstado.setText("Modificar Estado");
+        EstudianteModificarEstado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EstudianteModificarEstadoActionPerformed(evt);
+            }
+        });
+        MenuEstudiante.add(EstudianteModificarEstado);
+
+        EstudianteVer.setBackground(new java.awt.Color(254, 204, 102));
+        EstudianteVer.setText("Ver");
+        EstudianteVer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EstudianteVerActionPerformed(evt);
+            }
+        });
+        MenuEstudiante.add(EstudianteVer);
+
+        jMenuBar1.add(MenuEstudiante);
+
+        MenuInscripcion.setBackground(new java.awt.Color(254, 204, 102));
+        MenuInscripcion.setForeground(new java.awt.Color(153, 0, 0));
+        MenuInscripcion.setText("Gestion Inscripciones");
+
+        InscripcionRegistrar.setBackground(new java.awt.Color(254, 204, 102));
+        InscripcionRegistrar.setText("Inscribir");
+        InscripcionRegistrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                InscripcionRegistrarActionPerformed(evt);
+            }
+        });
+        MenuInscripcion.add(InscripcionRegistrar);
+
+        InscripcionModificar.setBackground(new java.awt.Color(254, 204, 102));
+        InscripcionModificar.setText("Modificar");
+        InscripcionModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                InscripcionModificarActionPerformed(evt);
+            }
+        });
+        MenuInscripcion.add(InscripcionModificar);
+
+        InscripcionModificarEstado.setBackground(new java.awt.Color(254, 204, 102));
+        InscripcionModificarEstado.setText("Modificar Estado");
+        MenuInscripcion.add(InscripcionModificarEstado);
+
+        InscripcionVer.setBackground(new java.awt.Color(254, 204, 102));
+        InscripcionVer.setText("Ver");
+        MenuInscripcion.add(InscripcionVer);
+
+        jMenuBar1.add(MenuInscripcion);
+
+        MenuHorarioyAula.setBackground(new java.awt.Color(254, 204, 102));
+        MenuHorarioyAula.setForeground(new java.awt.Color(153, 0, 0));
+        MenuHorarioyAula.setText("Administrar Horario y Aula");
+
+        MenuHorario.setBackground(new java.awt.Color(254, 204, 102));
+        MenuHorario.setForeground(new java.awt.Color(153, 0, 0));
+        MenuHorario.setText("Gestion Horario");
+
+        HorarioRegistrar.setBackground(new java.awt.Color(254, 204, 102));
+        HorarioRegistrar.setText("Crear");
+        HorarioRegistrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HorarioRegistrarActionPerformed(evt);
+            }
+        });
+        MenuHorario.add(HorarioRegistrar);
+
+        HorarioModificar.setBackground(new java.awt.Color(254, 204, 102));
+        HorarioModificar.setText("Modificar");
+        HorarioModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HorarioModificarActionPerformed(evt);
+            }
+        });
+        MenuHorario.add(HorarioModificar);
+
+        HorarioModificarEstado.setBackground(new java.awt.Color(254, 204, 102));
+        HorarioModificarEstado.setText("Modificar Estado");
+        HorarioModificarEstado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HorarioModificarEstadoActionPerformed(evt);
+            }
+        });
+        MenuHorario.add(HorarioModificarEstado);
+
+        HorarioVer.setBackground(new java.awt.Color(254, 204, 102));
+        HorarioVer.setText("Ver");
+        HorarioVer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HorarioVerActionPerformed(evt);
+            }
+        });
+        MenuHorario.add(HorarioVer);
+
+        MenuHorarioyAula.add(MenuHorario);
+
+        MenuAula.setBackground(new java.awt.Color(254, 204, 102));
+        MenuAula.setForeground(new java.awt.Color(153, 0, 0));
+        MenuAula.setText("Gestion Aula");
+
+        AulaRegistrar.setBackground(new java.awt.Color(254, 204, 102));
+        AulaRegistrar.setText("Crear");
+        AulaRegistrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AulaRegistrarActionPerformed(evt);
+            }
+        });
+        MenuAula.add(AulaRegistrar);
+
+        AulaModificar.setBackground(new java.awt.Color(254, 204, 102));
+        AulaModificar.setText("Modificar");
+        AulaModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AulaModificarActionPerformed(evt);
+            }
+        });
+        MenuAula.add(AulaModificar);
+
+        AulaModificarEstado.setBackground(new java.awt.Color(254, 204, 102));
+        AulaModificarEstado.setText("Modificar Estado");
+        AulaModificarEstado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AulaModificarEstadoActionPerformed(evt);
+            }
+        });
+        MenuAula.add(AulaModificarEstado);
+
+        AulaVer.setBackground(new java.awt.Color(254, 204, 102));
+        AulaVer.setText("Ver");
+        AulaVer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AulaVerActionPerformed(evt);
+            }
+        });
+        MenuAula.add(AulaVer);
+
+        MenuHorarioyAula.add(MenuAula);
+
+        jMenuBar1.add(MenuHorarioyAula);
+
+        MenuAdministracionModulos.setBackground(new java.awt.Color(254, 204, 102));
+        MenuAdministracionModulos.setForeground(new java.awt.Color(153, 0, 0));
+        MenuAdministracionModulos.setText("Administracio de Modulos");
+
+        MenuModulo.setBackground(new java.awt.Color(254, 204, 102));
+        MenuModulo.setForeground(new java.awt.Color(153, 0, 0));
+        MenuModulo.setText("Gestion Modulo");
+
+        ModuloCrear.setBackground(new java.awt.Color(254, 204, 102));
+        ModuloCrear.setText("Crear");
+        ModuloCrear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ModuloCrearActionPerformed(evt);
+            }
+        });
+        MenuModulo.add(ModuloCrear);
+
+        ModuloModificar.setBackground(new java.awt.Color(254, 204, 102));
+        ModuloModificar.setText("Modificar");
+        ModuloModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ModuloModificarActionPerformed(evt);
+            }
+        });
+        MenuModulo.add(ModuloModificar);
+
+        ModuloModificarEstado.setBackground(new java.awt.Color(254, 204, 102));
+        ModuloModificarEstado.setText("Modificar Estado");
+        MenuModulo.add(ModuloModificarEstado);
+
+        ModuloVer.setBackground(new java.awt.Color(254, 204, 102));
+        ModuloVer.setText("Ver");
+        MenuModulo.add(ModuloVer);
+
+        MenuAdministracionModulos.add(MenuModulo);
+
+        MenuAsignacion.setBackground(new java.awt.Color(254, 204, 102));
+        MenuAsignacion.setForeground(new java.awt.Color(153, 0, 0));
+        MenuAsignacion.setText("Asignacion Modulo");
+
+        AsignacionRegistrar.setBackground(new java.awt.Color(254, 204, 102));
+        AsignacionRegistrar.setText("Asignar");
+        AsignacionRegistrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AsignacionRegistrarActionPerformed(evt);
+            }
+        });
+        MenuAsignacion.add(AsignacionRegistrar);
+
+        AsignacionModificar.setBackground(new java.awt.Color(254, 204, 102));
+        AsignacionModificar.setText("Modificar");
+        AsignacionModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AsignacionModificarActionPerformed(evt);
+            }
+        });
+        MenuAsignacion.add(AsignacionModificar);
+
+        AsignacionModificarEstado.setBackground(new java.awt.Color(254, 204, 102));
+        AsignacionModificarEstado.setText("Modificar Estado");
+        MenuAsignacion.add(AsignacionModificarEstado);
+
+        AsignacionVer.setBackground(new java.awt.Color(254, 204, 102));
+        AsignacionVer.setText("Ver");
+        MenuAsignacion.add(AsignacionVer);
+
+        MenuAdministracionModulos.add(MenuAsignacion);
+
+        jMenuBar1.add(MenuAdministracionModulos);
+
+        MenuCaja.setBackground(new java.awt.Color(254, 204, 102));
+        MenuCaja.setForeground(new java.awt.Color(153, 0, 0));
+        MenuCaja.setText("Gestion Caja");
+        MenuCaja.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuCajaActionPerformed(evt);
+            }
+        });
+
+        MenuPagos.setBackground(new java.awt.Color(254, 204, 102));
+        MenuPagos.setForeground(new java.awt.Color(153, 0, 0));
+        MenuPagos.setText("Pagos");
+
+        PagosPagarCuota.setBackground(new java.awt.Color(254, 204, 102));
+        PagosPagarCuota.setText("Pagar Cuota");
+        PagosPagarCuota.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PagosPagarCuotaActionPerformed(evt);
+            }
+        });
+        MenuPagos.add(PagosPagarCuota);
+
+        PagosModificarCuota.setBackground(new java.awt.Color(254, 204, 102));
+        PagosModificarCuota.setText("Modificar Cuota");
+        PagosModificarCuota.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PagosModificarCuotaActionPerformed(evt);
+            }
+        });
+        MenuPagos.add(PagosModificarCuota);
+
+        PagosEliminarCuota.setBackground(new java.awt.Color(254, 204, 102));
+        PagosEliminarCuota.setText("Eliminar Cuota");
+        MenuPagos.add(PagosEliminarCuota);
+
+        PagosVerCuota.setBackground(new java.awt.Color(254, 204, 102));
+        PagosVerCuota.setText("Ver Cuotas");
+        MenuPagos.add(PagosVerCuota);
+
+        MenuCaja.add(MenuPagos);
+
+        MenuProgramacionPagos.setBackground(new java.awt.Color(254, 204, 102));
+        MenuProgramacionPagos.setForeground(new java.awt.Color(153, 0, 0));
+        MenuProgramacionPagos.setText("Programacion Pagos");
+
+        ProgPagosProgramar.setBackground(new java.awt.Color(254, 204, 102));
+        ProgPagosProgramar.setText("Programar");
+        ProgPagosProgramar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ProgPagosProgramarActionPerformed(evt);
+            }
+        });
+        MenuProgramacionPagos.add(ProgPagosProgramar);
+
+        ProgPagosModificar.setBackground(new java.awt.Color(254, 204, 102));
+        ProgPagosModificar.setText("Modificar");
+        MenuProgramacionPagos.add(ProgPagosModificar);
+
+        ProgPagosEliminar.setBackground(new java.awt.Color(254, 204, 102));
+        ProgPagosEliminar.setText("Eliminar");
+        MenuProgramacionPagos.add(ProgPagosEliminar);
+
+        ProgPagosVer.setBackground(new java.awt.Color(254, 204, 102));
+        ProgPagosVer.setText("Ver");
+        MenuProgramacionPagos.add(ProgPagosVer);
+
+        MenuCaja.add(MenuProgramacionPagos);
+
+        MenuDescuentos.setBackground(new java.awt.Color(254, 204, 102));
+        MenuDescuentos.setForeground(new java.awt.Color(153, 0, 0));
+        MenuDescuentos.setText("Descuentos");
+
+        DescuentosProgramar.setBackground(new java.awt.Color(254, 204, 102));
+        DescuentosProgramar.setText("Programar ");
+        DescuentosProgramar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DescuentosProgramarActionPerformed(evt);
+            }
+        });
+        MenuDescuentos.add(DescuentosProgramar);
+
+        DescuentosModificar.setBackground(new java.awt.Color(254, 204, 102));
+        DescuentosModificar.setText("Modificar");
+        MenuDescuentos.add(DescuentosModificar);
+
+        DescuentosEliminar.setBackground(new java.awt.Color(254, 204, 102));
+        DescuentosEliminar.setText("Eliminar");
+        MenuDescuentos.add(DescuentosEliminar);
+
+        DescuentosVer.setBackground(new java.awt.Color(254, 204, 102));
+        DescuentosVer.setText("Ver");
+        MenuDescuentos.add(DescuentosVer);
+
+        MenuCaja.add(MenuDescuentos);
+
+        jMenuBar1.add(MenuCaja);
+
+        MenuAsistencia.setBackground(new java.awt.Color(254, 204, 102));
+        MenuAsistencia.setForeground(new java.awt.Color(153, 0, 0));
+        MenuAsistencia.setText("Gestion Asistencia");
+
+        AsistenciaControl.setBackground(new java.awt.Color(254, 204, 102));
+        AsistenciaControl.setText("Control ");
+        AsistenciaControl.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AsistenciaControlActionPerformed(evt);
+            }
+        });
+        MenuAsistencia.add(AsistenciaControl);
+
+        AsistenciaModificar.setBackground(new java.awt.Color(254, 204, 102));
+        AsistenciaModificar.setText("Modificar");
+        MenuAsistencia.add(AsistenciaModificar);
+
+        AsistenciaEliminar.setBackground(new java.awt.Color(254, 204, 102));
+        AsistenciaEliminar.setText("Eliminar");
+        MenuAsistencia.add(AsistenciaEliminar);
+
+        AsistenciaVer.setBackground(new java.awt.Color(254, 204, 102));
+        AsistenciaVer.setText("Ver");
+        MenuAsistencia.add(AsistenciaVer);
+
+        jMenuBar1.add(MenuAsistencia);
 
         setJMenuBar(jMenuBar1);
 
@@ -638,15 +609,11 @@ public class PrincipalICBA extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(731, Short.MAX_VALUE))
+            .addGap(0, 1012, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(196, Short.MAX_VALUE))
+            .addGap(0, 285, Short.MAX_VALUE)
         );
 
         pack();
@@ -656,9 +623,9 @@ public class PrincipalICBA extends javax.swing.JFrame {
         System.exit(1);        // TODO add your handling code here:
 }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    private void InscripcionModuloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InscripcionModuloActionPerformed
+    private void InscripcionRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InscripcionRegistrarActionPerformed
         //InscripcionEstudianteNuevo inscripcion=new InscripcionEstudiante(this,true);
-        InscripcionEstudianteNuevo inscripcion=new InscripcionEstudianteNuevo();
+        InscripcionEstudianteRegistrar inscripcion=new InscripcionEstudianteRegistrar();
         
         inscripcion.setLocation((panel.getWidth())/4,(panel.getHeight())/6);
         inscripcion.setVisible(true);
@@ -667,7 +634,7 @@ public class PrincipalICBA extends javax.swing.JFrame {
         /*        InscripcionEstudiante inscripcion=new InscripcionEstudiante(this,true);
         inscripcion.setLocation((panel.getWidth())/4,(panel.getHeight())/6);
         inscripcion.setVisible(true);*/
-}//GEN-LAST:event_InscripcionModuloActionPerformed
+}//GEN-LAST:event_InscripcionRegistrarActionPerformed
 
     private void MenuCajaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuCajaActionPerformed
 
@@ -675,77 +642,77 @@ public class PrincipalICBA extends javax.swing.JFrame {
         
 }//GEN-LAST:event_MenuCajaActionPerformed
 
-    private void RegistrarEstudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarEstudianteActionPerformed
+    private void EstudianteRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EstudianteRegistrarActionPerformed
         EstudianteRegistrar registroestudiante = new EstudianteRegistrar();
         //registroestudiante.setLocation((panel.getWidth())/4,(panel.getHeight())/6);
         registroestudiante.setLocation((panel.getWidth())/4,0);
         registroestudiante.setVisible(true);
-}//GEN-LAST:event_RegistrarEstudianteActionPerformed
+}//GEN-LAST:event_EstudianteRegistrarActionPerformed
 
-    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+    private void UsuarioRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsuarioRegistrarActionPerformed
         UsuarioRegistrar registroestudiante = new UsuarioRegistrar();
         registroestudiante.setLocation((panel.getWidth())/4,(panel.getHeight())/6);
         registroestudiante.setVisible(true);      
-    }//GEN-LAST:event_jMenuItem8ActionPerformed
+    }//GEN-LAST:event_UsuarioRegistrarActionPerformed
 
-    private void ModificarEstudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarEstudianteActionPerformed
+    private void EstudianteModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EstudianteModificarActionPerformed
           EstudianteBuscarActualizar editarestudiante=new EstudianteBuscarActualizar();
           editarestudiante.setLocation((panel.getWidth())/4,(panel.getHeight())/8);
           editarestudiante.setVisible(true);
-    }//GEN-LAST:event_ModificarEstudianteActionPerformed
+    }//GEN-LAST:event_EstudianteModificarActionPerformed
 
-    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
+    private void AsignacionRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AsignacionRegistrarActionPerformed
         AsignarModulo asignarmodulo=new AsignarModulo(this,true);
         asignarmodulo.setVisible(true);
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem9ActionPerformed
+    }//GEN-LAST:event_AsignacionRegistrarActionPerformed
 
-    private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
+    private void ModuloCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModuloCrearActionPerformed
         // TODO add your handling code here:
         CrearModulo crearmodulo=new CrearModulo(this,true);
         crearmodulo.setLocation((panel.getWidth())/4,(panel.getHeight())/8);
         crearmodulo.setVisible(true);
-    }//GEN-LAST:event_jMenuItem14ActionPerformed
+    }//GEN-LAST:event_ModuloCrearActionPerformed
 
-    private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
+    private void ModuloModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModuloModificarActionPerformed
         // TODO add your handling code here:
         ModificarModulo editarmodulo=new ModificarModulo(this,true);
         editarmodulo.setVisible(true);
-    }//GEN-LAST:event_jMenuItem15ActionPerformed
+    }//GEN-LAST:event_ModuloModificarActionPerformed
 
-    private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
+    private void AsignacionModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AsignacionModificarActionPerformed
         // TODO add your handling code here:
         ModificarAsignacion editarasignacion=new ModificarAsignacion(this,true);
         editarasignacion.setVisible(true);
-    }//GEN-LAST:event_jMenuItem13ActionPerformed
+    }//GEN-LAST:event_AsignacionModificarActionPerformed
 
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+    private void PagosPagarCuotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PagosPagarCuotaActionPerformed
 
         // TODO add your handling code here:
         RegistrarPago pagar=new RegistrarPago(this,true);
         pagar.setLocation((panel.getWidth())/4,(panel.getHeight())/8);
         pagar.setVisible(true);
-}//GEN-LAST:event_jMenuItem6ActionPerformed
+}//GEN-LAST:event_PagosPagarCuotaActionPerformed
 
-    private void ModificarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarUsuarioActionPerformed
+    private void UsuarioModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsuarioModificarActionPerformed
         UsuarioBuscarActualizar editarusuario=new UsuarioBuscarActualizar();
         editarusuario.setLocation((panel.getWidth())/4,(panel.getHeight())/8);
         editarusuario.setVisible(true);        
-    }//GEN-LAST:event_ModificarUsuarioActionPerformed
+    }//GEN-LAST:event_UsuarioModificarActionPerformed
 
-    private void RegistrarAulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarAulaActionPerformed
+    private void AulaRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AulaRegistrarActionPerformed
         AulaRegistrar registrar = new AulaRegistrar();
         registrar.setLocation((panel.getWidth())/4,(panel.getHeight())/8);
         registrar.setVisible(true);  
-    }//GEN-LAST:event_RegistrarAulaActionPerformed
+    }//GEN-LAST:event_AulaRegistrarActionPerformed
 
-    private void ModificarHorarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarHorarioActionPerformed
+    private void HorarioModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HorarioModificarActionPerformed
         HorarioBuscarModificar editar = new HorarioBuscarModificar();
         editar.setLocation((panel.getWidth())/4,(panel.getHeight())/8);
         editar.setVisible(true);
-    }//GEN-LAST:event_ModificarHorarioActionPerformed
+    }//GEN-LAST:event_HorarioModificarActionPerformed
 
-    private void RegistrarHorarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarHorarioActionPerformed
+    private void HorarioRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HorarioRegistrarActionPerformed
         // TODO add your handling code here:
         /*CrearHorario registrar=new CrearHorario(this,true);
         registrar.setVisible(true);*/
@@ -753,64 +720,43 @@ public class PrincipalICBA extends javax.swing.JFrame {
         HorarioRegistrar registrar = new HorarioRegistrar();
         registrar.setVisible(true);
         
-    }//GEN-LAST:event_RegistrarHorarioActionPerformed
+    }//GEN-LAST:event_HorarioRegistrarActionPerformed
 
-    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+    private void PagosModificarCuotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PagosModificarCuotaActionPerformed
         // TODO add your handling code here:
        // EditarCuota editarcuota=new EditarCuota(this,true);
        // editarcuota.setVisible(true);
-    }//GEN-LAST:event_jMenuItem7ActionPerformed
+    }//GEN-LAST:event_PagosModificarCuotaActionPerformed
 
-    private void jMenuItem20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem20ActionPerformed
+    private void CertificadosImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CertificadosImprimirActionPerformed
         // TODO add your handling code here:
         ImprimirCertificado imprimircertificado=new ImprimirCertificado(this,true);
         imprimircertificado.setVisible(true);
-    }//GEN-LAST:event_jMenuItem20ActionPerformed
+    }//GEN-LAST:event_CertificadosImprimirActionPerformed
 
-    private void jMenuItem21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem21ActionPerformed
+    private void AsistenciaControlActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AsistenciaControlActionPerformed
         // TODO add your handling code here:
         ControlAsistencia controasistencia=new ControlAsistencia(this,true);
         controasistencia.setVisible(true);
-    }//GEN-LAST:event_jMenuItem21ActionPerformed
+    }//GEN-LAST:event_AsistenciaControlActionPerformed
 
-    private void jMenuItem23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem23ActionPerformed
+    private void ProgPagosProgramarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProgPagosProgramarActionPerformed
         ProgramacionPagos programacionpagos=new ProgramacionPagos(this,true);
         programacionpagos.setVisible(true);
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem23ActionPerformed
+    }//GEN-LAST:event_ProgPagosProgramarActionPerformed
 
-    private void jMenuItem25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem25ActionPerformed
+    private void EstadisticasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EstadisticasActionPerformed
         // TODO add your handling code here:
         Estadisticas estadisticas=new Estadisticas(this,true);
         estadisticas.setVisible(true);
-    }//GEN-LAST:event_jMenuItem25ActionPerformed
+    }//GEN-LAST:event_EstadisticasActionPerformed
 
     private void MenuEstudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuEstudianteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_MenuEstudianteActionPerformed
 
-    private void NuevoestudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NuevoestudianteActionPerformed
-        // TODO add your handling code here:
-        /*EstudianteRegistrarAntiguo registroestudiante = new EstudianteRegistrarAntiguo(this,true);
-        registroestudiante.setLocation((panel.getWidth())/4,(panel.getHeight())/6);
-        registroestudiante.setVisible(true);*/
-    }//GEN-LAST:event_NuevoestudianteActionPerformed
-
-    private void InscripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InscripcionActionPerformed
-        // TODO add your handling code here:
-        InscripcionEstudiante inscripcion=new InscripcionEstudiante(this,true);
-        inscripcion.setLocation((panel.getWidth())/4,(panel.getHeight())/6);
-        inscripcion.setVisible(true);
-    }//GEN-LAST:event_InscripcionActionPerformed
-
-    private void BotonBarraPagarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBarraPagarActionPerformed
-        // TODO add your handling code here:
-        RegistrarPago pagar=new RegistrarPago(this,true);
-        pagar.setLocation((panel.getWidth())/4,(panel.getHeight())/8);
-        pagar.setVisible(true);
-    }//GEN-LAST:event_BotonBarraPagarActionPerformed
-
-    private void ModificarEstadoEstudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarEstadoEstudianteActionPerformed
+    private void EstudianteModificarEstadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EstudianteModificarEstadoActionPerformed
         EstudianteBuscarEstado estado = new EstudianteBuscarEstado();
         estado.setLocation(300,200);
         
@@ -818,44 +764,44 @@ public class PrincipalICBA extends javax.swing.JFrame {
         estado.setVisible(true); 
         //EstadoEstudiante estadoestudiante=new EstadoEstudiante(this,true);
        // estadoestudiante.setVisible(true);
-    }//GEN-LAST:event_ModificarEstadoEstudianteActionPerformed
+    }//GEN-LAST:event_EstudianteModificarEstadoActionPerformed
 
-    private void jMenuItem39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem39ActionPerformed
+    private void NotificacionesProgramarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NotificacionesProgramarActionPerformed
         // TODO add your handling code here:
         ProgramarNotificacion programarnotificacion=new ProgramarNotificacion(this,true);
         programarnotificacion.setVisible(true);
 
-    }//GEN-LAST:event_jMenuItem39ActionPerformed
+    }//GEN-LAST:event_NotificacionesProgramarActionPerformed
 
-    private void jMenuItem48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem48ActionPerformed
+    private void DescuentosProgramarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescuentosProgramarActionPerformed
         // TODO add your handling code here:
         ProgramarDescuento programardescuento= new ProgramarDescuento(this,true);
         programardescuento.setVisible(true);
-    }//GEN-LAST:event_jMenuItem48ActionPerformed
+    }//GEN-LAST:event_DescuentosProgramarActionPerformed
 
-    private void jMenuItem52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem52ActionPerformed
+    private void CertificadosCargarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CertificadosCargarActionPerformed
         // TODO add your handling code here:
         CargarCetificados cargarcertificados=new CargarCetificados(this,true);
         cargarcertificados.setVisible(true);
-    }//GEN-LAST:event_jMenuItem52ActionPerformed
+    }//GEN-LAST:event_CertificadosCargarActionPerformed
 
-    private void jMenuItem40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem40ActionPerformed
+    private void NotificacionesModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NotificacionesModificarActionPerformed
         // TODO add your handling code here:
         ModificarNotificacion modificarnotificacion=new ModificarNotificacion(this,true);
         modificarnotificacion.setVisible(true);
-    }//GEN-LAST:event_jMenuItem40ActionPerformed
+    }//GEN-LAST:event_NotificacionesModificarActionPerformed
 
-    private void VerEstudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VerEstudianteActionPerformed
+    private void EstudianteVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EstudianteVerActionPerformed
         EstudianteBuscarVer buscarestudiante=new EstudianteBuscarVer();
         buscarestudiante.setLocation(300,200);
         buscarestudiante.setVisible(true);        
-    }//GEN-LAST:event_VerEstudianteActionPerformed
+    }//GEN-LAST:event_EstudianteVerActionPerformed
 
-    private void VerUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VerUsuarioActionPerformed
+    private void UsuarioVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsuarioVerActionPerformed
         UsuarioBuscarVer buscarusuario=new UsuarioBuscarVer();
         buscarusuario.setLocation(300,200);
         buscarusuario.setVisible(true);    
-    }//GEN-LAST:event_VerUsuarioActionPerformed
+    }//GEN-LAST:event_UsuarioVerActionPerformed
 
     private void MenuUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuUsuarioActionPerformed
         UsuarioBuscarActualizar buscarusuario=new UsuarioBuscarActualizar();
@@ -863,45 +809,48 @@ public class PrincipalICBA extends javax.swing.JFrame {
         buscarusuario.setVisible(true);    
     }//GEN-LAST:event_MenuUsuarioActionPerformed
 
-    private void ModificarEstadoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarEstadoUsuarioActionPerformed
+    private void UsuarioModificarEstadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsuarioModificarEstadoActionPerformed
         UsuarioBuscarEstado estado = new UsuarioBuscarEstado();
         estado.setLocation(300,200);
         estado.setVisible(true); 
-    }//GEN-LAST:event_ModificarEstadoUsuarioActionPerformed
+    }//GEN-LAST:event_UsuarioModificarEstadoActionPerformed
 
-    private void VerHorarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VerHorarioActionPerformed
+    private void HorarioVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HorarioVerActionPerformed
         HorarioVer buscar = new HorarioVer();
         buscar.setLocation(300,200);
         buscar.setVisible(true); 
-    }//GEN-LAST:event_VerHorarioActionPerformed
+    }//GEN-LAST:event_HorarioVerActionPerformed
 
-    private void ModificarEstadoHorarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarEstadoHorarioActionPerformed
+    private void HorarioModificarEstadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HorarioModificarEstadoActionPerformed
         HorarioBuscarEstado buscar = new HorarioBuscarEstado();
         buscar.setLocation(300,200);
         buscar.setVisible(true); 
-    }//GEN-LAST:event_ModificarEstadoHorarioActionPerformed
+    }//GEN-LAST:event_HorarioModificarEstadoActionPerformed
 
-    private void ModificarAulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarAulaActionPerformed
+    private void AulaModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AulaModificarActionPerformed
         AulaBuscarModificar editar = new AulaBuscarModificar();
         editar.setLocation((panel.getWidth())/4,(panel.getHeight())/8);
         editar.setVisible(true);
-    }//GEN-LAST:event_ModificarAulaActionPerformed
+    }//GEN-LAST:event_AulaModificarActionPerformed
 
-    private void ModificarEstadoAulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarEstadoAulaActionPerformed
+    private void AulaModificarEstadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AulaModificarEstadoActionPerformed
         AulaBuscarEstado buscar = new AulaBuscarEstado();
         buscar.setLocation(300,200);
         buscar.setVisible(true); 
-    }//GEN-LAST:event_ModificarEstadoAulaActionPerformed
+    }//GEN-LAST:event_AulaModificarEstadoActionPerformed
 
-    private void VerAulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VerAulaActionPerformed
+    private void AulaVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AulaVerActionPerformed
         AulaBuscarVer buscar = new AulaBuscarVer();
         buscar.setLocation(300,200);
         buscar.setVisible(true); 
-    }//GEN-LAST:event_VerAulaActionPerformed
+    }//GEN-LAST:event_AulaVerActionPerformed
 
-    /**
-    * @param args the command line arguments
-    */
+    private void InscripcionModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InscripcionModificarActionPerformed
+        InscripcionBuscarModificar inscripcion=new InscripcionBuscarModificar();
+        inscripcion.setLocation((panel.getWidth())/4,(panel.getHeight())/6);
+        inscripcion.setVisible(true);
+    }//GEN-LAST:event_InscripcionModificarActionPerformed
+
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -911,82 +860,77 @@ public class PrincipalICBA extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BotonBarraPagar;
-    private javax.swing.JButton Inscripcion;
-    private javax.swing.JMenuItem InscripcionModulo;
+    private javax.swing.JMenuItem AsignacionModificar;
+    private javax.swing.JMenuItem AsignacionModificarEstado;
+    private javax.swing.JMenuItem AsignacionRegistrar;
+    private javax.swing.JMenuItem AsignacionVer;
+    private javax.swing.JMenuItem AsistenciaControl;
+    private javax.swing.JMenuItem AsistenciaEliminar;
+    private javax.swing.JMenuItem AsistenciaModificar;
+    private javax.swing.JMenuItem AsistenciaVer;
+    private javax.swing.JMenuItem AulaModificar;
+    private javax.swing.JMenuItem AulaModificarEstado;
+    private javax.swing.JMenuItem AulaRegistrar;
+    private javax.swing.JMenuItem AulaVer;
+    private javax.swing.JMenuItem CertificadosCargar;
+    private javax.swing.JMenuItem CertificadosImprimir;
+    private javax.swing.JMenuItem DescuentosEliminar;
+    private javax.swing.JMenuItem DescuentosModificar;
+    private javax.swing.JMenuItem DescuentosProgramar;
+    private javax.swing.JMenuItem DescuentosVer;
+    private javax.swing.JMenuItem Estadisticas;
+    private javax.swing.JMenuItem EstudianteModificar;
+    private javax.swing.JMenuItem EstudianteModificarEstado;
+    private javax.swing.JMenuItem EstudianteRegistrar;
+    private javax.swing.JMenuItem EstudianteVer;
+    private javax.swing.JMenuItem HorarioModificar;
+    private javax.swing.JMenuItem HorarioModificarEstado;
+    private javax.swing.JMenuItem HorarioRegistrar;
+    private javax.swing.JMenuItem HorarioVer;
+    private javax.swing.JMenuItem InscripcionModificar;
+    private javax.swing.JMenuItem InscripcionModificarEstado;
+    private javax.swing.JMenuItem InscripcionRegistrar;
+    private javax.swing.JMenuItem InscripcionVer;
+    private javax.swing.JMenu MenuAdministracionModulos;
+    private javax.swing.JMenu MenuArchivo;
+    private javax.swing.JMenu MenuAsignacion;
     private javax.swing.JMenu MenuAsistencia;
+    private javax.swing.JMenu MenuAula;
     private javax.swing.JMenu MenuCaja;
-    private javax.swing.JMenu MenuCertificado;
+    private javax.swing.JMenu MenuCertificados;
+    private javax.swing.JMenu MenuDescuentos;
     private javax.swing.JMenu MenuEstudiante;
+    private javax.swing.JMenu MenuHorario;
     private javax.swing.JMenu MenuHorarioyAula;
     private javax.swing.JMenu MenuInscripcion;
-    private javax.swing.JMenu MenuModulos;
+    private javax.swing.JMenu MenuModulo;
+    private javax.swing.JMenu MenuNotificaciones;
+    private javax.swing.JMenu MenuPagos;
+    private javax.swing.JMenu MenuProgramacionPagos;
     private javax.swing.JMenu MenuUsuario;
-    private javax.swing.JMenuItem ModificarAula;
-    private javax.swing.JMenuItem ModificarEstadoAula;
-    private javax.swing.JMenuItem ModificarEstadoEstudiante;
-    private javax.swing.JMenuItem ModificarEstadoHorario;
-    private javax.swing.JMenuItem ModificarEstadoUsuario;
-    private javax.swing.JMenuItem ModificarEstudiante;
-    private javax.swing.JMenuItem ModificarHorario;
-    private javax.swing.JMenuItem ModificarUsuario;
-    private javax.swing.JButton Nuevoestudiante;
-    private javax.swing.JMenuItem RegistrarAula;
-    private javax.swing.JMenuItem RegistrarEstudiante;
-    private javax.swing.JMenuItem RegistrarHorario;
-    private javax.swing.JMenuItem VerAula;
-    private javax.swing.JMenuItem VerEstudiante;
-    private javax.swing.JMenuItem VerHorario;
-    private javax.swing.JMenuItem VerUsuario;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu10;
-    private javax.swing.JMenu jMenu12;
-    private javax.swing.JMenu jMenu13;
-    private javax.swing.JMenu jMenu15;
-    private javax.swing.JMenu jMenu16;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu7;
+    private javax.swing.JMenuItem ModuloCrear;
+    private javax.swing.JMenuItem ModuloModificar;
+    private javax.swing.JMenuItem ModuloModificarEstado;
+    private javax.swing.JMenuItem ModuloVer;
+    private javax.swing.JMenuItem NotificacionesEliminar;
+    private javax.swing.JMenuItem NotificacionesModificar;
+    private javax.swing.JMenuItem NotificacionesProgramar;
+    private javax.swing.JMenuItem NotificacionesVer;
+    private javax.swing.JMenuItem PagosEliminarCuota;
+    private javax.swing.JMenuItem PagosModificarCuota;
+    private javax.swing.JMenuItem PagosPagarCuota;
+    private javax.swing.JMenuItem PagosVerCuota;
+    private javax.swing.JMenuItem ProgPagosEliminar;
+    private javax.swing.JMenuItem ProgPagosModificar;
+    private javax.swing.JMenuItem ProgPagosProgramar;
+    private javax.swing.JMenuItem ProgPagosVer;
+    private javax.swing.JMenuItem UsuarioModificar;
+    private javax.swing.JMenuItem UsuarioModificarEstado;
+    private javax.swing.JMenuItem UsuarioRegistrar;
+    private javax.swing.JMenuItem UsuarioVer;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem13;
-    private javax.swing.JMenuItem jMenuItem14;
-    private javax.swing.JMenuItem jMenuItem15;
-    private javax.swing.JMenuItem jMenuItem20;
-    private javax.swing.JMenuItem jMenuItem21;
-    private javax.swing.JMenuItem jMenuItem22;
-    private javax.swing.JMenuItem jMenuItem23;
-    private javax.swing.JMenuItem jMenuItem24;
-    private javax.swing.JMenuItem jMenuItem25;
-    private javax.swing.JMenuItem jMenuItem28;
-    private javax.swing.JMenuItem jMenuItem29;
-    private javax.swing.JMenuItem jMenuItem30;
-    private javax.swing.JMenuItem jMenuItem34;
-    private javax.swing.JMenuItem jMenuItem35;
-    private javax.swing.JMenuItem jMenuItem36;
-    private javax.swing.JMenuItem jMenuItem37;
-    private javax.swing.JMenuItem jMenuItem38;
-    private javax.swing.JMenuItem jMenuItem39;
-    private javax.swing.JMenuItem jMenuItem40;
-    private javax.swing.JMenuItem jMenuItem41;
-    private javax.swing.JMenuItem jMenuItem42;
-    private javax.swing.JMenuItem jMenuItem43;
-    private javax.swing.JMenuItem jMenuItem44;
-    private javax.swing.JMenuItem jMenuItem45;
-    private javax.swing.JMenuItem jMenuItem46;
-    private javax.swing.JMenuItem jMenuItem47;
-    private javax.swing.JMenuItem jMenuItem48;
-    private javax.swing.JMenuItem jMenuItem49;
-    private javax.swing.JMenuItem jMenuItem50;
-    private javax.swing.JMenuItem jMenuItem51;
-    private javax.swing.JMenuItem jMenuItem52;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JMenuItem jMenuItem8;
-    private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPopupMenu.Separator jSeparator1;
-    private javax.swing.JToolBar jToolBar1;
     // End of variables declaration//GEN-END:variables
     private JPanelImagen panel;
 }
