@@ -99,6 +99,9 @@ public final class InscripcionBuscarModulo extends javax.swing.JDialog {
         
         jTableModulos.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         
+        
+        
+        
         jScrollPaneLista.setViewportView(jTableModulos);
 
         javax.swing.GroupLayout jPanelFondoLayout = new javax.swing.GroupLayout(jPanelFondo);
@@ -273,7 +276,7 @@ public final class InscripcionBuscarModulo extends javax.swing.JDialog {
         }
         
        limpiarTabla();
-       //modelo.addColumn("ID Modulo");
+       modelo.addColumn("ID Modulo");
        modelo.addColumn("Modalidad");
        modelo.addColumn("Tipo");
        modelo.addColumn("Nivel");
@@ -284,17 +287,21 @@ public final class InscripcionBuscarModulo extends javax.swing.JDialog {
             // Bucle para cada resultado en la consulta
             while (rs.next()){
                // Se crea un array que será una de las filas de la tabla.
-               Object [] fila = new Object[4]; // Hay tres columnas en la tabla
+               Object [] fila = new Object[5]; // Hay tres columnas en la tabla
                
                //modulo = Integer.parseInt(String.valueOf(rs.getObject(1)));
                // Se rellena cada posición del array con una de las columnas de la tabla en base de datos.
-               for (int i=0;i<4;i++){
-                   
-                  //if (i!=3)
-                   if (i!=0)
-                      fila[i] = rs.getObject(i+1); // El primer indice en rs es el 1, no el cero, por eso se suma 1.
-                   else                     
-                      fila[i] = rs.getObject(i+7);
+               for (int i=0;i<5;i++){          
+                   if (i==0)
+                       fila[i] = rs.getObject(i+1);
+                   else
+                   if (i==1) 
+                       fila[i] = rs.getObject(i+6);
+                   else
+                       fila[i] = rs.getObject(i);    // El primer indice en rs es el 1, no el cero, por eso se suma 1.
+   
+
+                            
                   
                   /*else
                       if ("true".equals(String.valueOf(rs.getObject(17))))
@@ -306,7 +313,13 @@ public final class InscripcionBuscarModulo extends javax.swing.JDialog {
             }          
         } catch (SQLException ex) {
             System.out.println("Hubo un problema al intentar ingresar lo datos" + ex);
-        }        
+        }    
+        
+        //Para ocultar una columna de la tabla que contiene los IDs
+        /*jTableModulos.getColumnModel().getColumn(0).setMaxWidth(0);
+        jTableModulos.getColumnModel().getColumn(0).setMinWidth(0);
+        jTableModulos.getColumnModel().getColumn(0).setPreferredWidth(0);*/
+        
     }    
     
     private void jButtonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarActionPerformed
