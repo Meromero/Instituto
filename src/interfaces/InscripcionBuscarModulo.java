@@ -316,9 +316,9 @@ public final class InscripcionBuscarModulo extends javax.swing.JDialog {
         }    
         
         //Para ocultar una columna de la tabla que contiene los IDs
-        /*jTableModulos.getColumnModel().getColumn(0).setMaxWidth(0);
+        jTableModulos.getColumnModel().getColumn(0).setMaxWidth(0);
         jTableModulos.getColumnModel().getColumn(0).setMinWidth(0);
-        jTableModulos.getColumnModel().getColumn(0).setPreferredWidth(0);*/
+        jTableModulos.getColumnModel().getColumn(0).setPreferredWidth(0);
         
     }    
     

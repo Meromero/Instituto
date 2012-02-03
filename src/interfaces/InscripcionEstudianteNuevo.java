@@ -4,11 +4,14 @@ import Conexion.ConexionModulo;
 import Entidades.Modulo;
 import com.mysql.jdbc.ResultSet;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 public class InscripcionEstudianteNuevo extends javax.swing.JDialog {
     GestorBD bd;
     Modulo modulo;
-    int idAlumno;
+    int idEstudiante;
     int idModulo;
     
     
@@ -16,8 +19,19 @@ public class InscripcionEstudianteNuevo extends javax.swing.JDialog {
         initComponents();
         bd = new GestorBD(); 
         bd.getConnection();  
+        idEstudiante = -1;
+        idModulo = -1;
+        
     }
   
+    public void cerrarVentana() {
+        try {
+            bd.cerrar();
+        } catch (SQLException ex) {
+            Logger.getLogger(EstudianteRegistrar.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        dispose();
+    }
     
     @SuppressWarnings("unchecked")
     private void initComponents() {//GEN-BEGIN:initComponents
@@ -29,7 +43,7 @@ public class InscripcionEstudianteNuevo extends javax.swing.JDialog {
         jTextFieldNivel = new javax.swing.JTextField();
         jTextFieldCurso = new javax.swing.JTextField();
         jTextFieldID1 = new javax.swing.JTextField();
-        jButtonBuscarEstudiante1 = new javax.swing.JButton();
+        jButtonBuscarModulo = new javax.swing.JButton();
         jTextFieldModalidad = new javax.swing.JTextField();
         jLabelApellidoMaterno1 = new javax.swing.JLabel();
         jLabelApellidoMaterno2 = new javax.swing.JLabel();
@@ -43,8 +57,8 @@ public class InscripcionEstudianteNuevo extends javax.swing.JDialog {
         jTextFieldApellidoPaterno = new javax.swing.JTextField();
         jTextFieldID = new javax.swing.JTextField();
         jButtonBuscarEstudiante = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jButtonGuardar = new javax.swing.JButton();
+        jButtonCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Inscripcion");
@@ -66,13 +80,13 @@ public class InscripcionEstudianteNuevo extends javax.swing.JDialog {
         jPanel2.add(jTextFieldCurso, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 220, -1));
         jPanel2.add(jTextFieldID1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 40, 50, -1));
 
-        jButtonBuscarEstudiante1.setText("Buscar");
-        jButtonBuscarEstudiante1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonBuscarModulo.setText("Buscar");
+        jButtonBuscarModulo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonBuscarEstudiante1ActionPerformed(evt);
+                jButtonBuscarModuloActionPerformed(evt);
             }
         });
-        jPanel2.add(jButtonBuscarEstudiante1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 80, -1, -1));
+        jPanel2.add(jButtonBuscarModulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 80, -1, -1));
         jPanel2.add(jTextFieldModalidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 30, 220, -1));
 
         jLabelApellidoMaterno1.setText("Modalidad (extens o reg)");
@@ -111,13 +125,34 @@ public class InscripcionEstudianteNuevo extends javax.swing.JDialog {
 
         jPanelFondo.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 560, 160));
 
-        jButton1.setText("Inscribir");
-        jPanelFondo.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 410, -1, -1));
+        jButtonGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/guardar1.JPG"))); // NOI18N
+        jButtonGuardar.setText("Inscribir");
+        jButtonGuardar.setBorderPainted(false);
+        jButtonGuardar.setContentAreaFilled(false);
+        jButtonGuardar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButtonGuardar.setOpaque(false);
+        jButtonGuardar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButtonGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonGuardarActionPerformed(evt);
+            }
+        });
+        jPanelFondo.add(jButtonGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 410, 160, 90));
 
-        jButton2.setText("Cancelar");
-        jPanelFondo.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 410, -1, -1));
+        jButtonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cancelar2.jpg"))); // NOI18N
+        jButtonCancelar.setText("Cancelar");
+        jButtonCancelar.setBorderPainted(false);
+        jButtonCancelar.setContentAreaFilled(false);
+        jButtonCancelar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButtonCancelar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButtonCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCancelarActionPerformed(evt);
+            }
+        });
+        jPanelFondo.add(jButtonCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, 160, 90));
 
-        getContentPane().add(jPanelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 480));
+        getContentPane().add(jPanelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, 540));
 
         pack();
     }//GEN-END:initComponents
@@ -127,13 +162,13 @@ public class InscripcionEstudianteNuevo extends javax.swing.JDialog {
         buscar.setModal(true);
         buscar.setVisible(true); 
        
-        idAlumno = buscar.alumno;
-        //jTextFieldID.setText(String.valueOf(idAlumno));
+        idEstudiante = buscar.alumno;
+        jTextFieldID.setText(String.valueOf(idEstudiante));
        
         try {
             //System.out.println(fila);
             //System.out.println(idEstudiante);
-            ResultSet rs = bd.consulta("SELECT * FROM `icba`.`estudiante` WHERE idEstudiante = "+idAlumno);
+            ResultSet rs = bd.consulta("SELECT * FROM `icba`.`estudiante` WHERE idEstudiante = "+idEstudiante);
             while (rs.next()){
             String nombre = rs.getString("nombre");
             jTextFieldNombre.setText(nombre);
@@ -146,15 +181,13 @@ public class InscripcionEstudianteNuevo extends javax.swing.JDialog {
             }
             rs.close();
          
-            bd.cerrar();              
+            //bd.cerrar();              
         } catch (SQLException ex) {
             System.out.println("Hubo un problema al consultar la base de datos" + ex);
         }        
-       
-       
     }//GEN-LAST:event_jButtonBuscarEstudianteActionPerformed
 
-    private void jButtonBuscarEstudiante1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarEstudiante1ActionPerformed
+    private void jButtonBuscarModuloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarModuloActionPerformed
         InscripcionBuscarModulo buscar = new InscripcionBuscarModulo();
         buscar.setModal(true);
         buscar.setVisible(true); 
@@ -162,85 +195,118 @@ public class InscripcionEstudianteNuevo extends javax.swing.JDialog {
         idModulo = buscar.modulo;
         jTextFieldID1.setText(String.valueOf(idModulo));
         
-        
-        
-        /*modulo.setTipoModulo(jTextFieldModalidad.toString());
-        modulo.settipo(jTextFieldTipo.toString());
-        modulo.setNivel(jTextFieldNivel.toString());
-        modulo.setsubNivel(jTextFieldCurso.toString());
+        try {
+            ResultSet rs = bd.consulta("SELECT * FROM `icba`.`modulo` WHERE idModulo = "+idModulo);
 
-        
-        ConexionModulo conexionmodulo=new ConexionModulo();
-        conexionmodulo.ModificarModulo(modulo);*/
-        
-        
-        /*BuscarModulo buscarmodulo = new BuscarModulo(this, true);
-        buscarmodulo.setLocation((getWidth())/4,(getHeight())/8);
-        buscarmodulo.setVisible(true);
+            while (rs.next()){
+            String modalidad = rs.getString("tipoModulo");
+            jTextFieldModalidad.setText(modalidad);
+            
+            String tipo = rs.getString("tipo");
+            jTextFieldTipo.setText(tipo);
+            
+            String nivel = rs.getString("nivel");
+            jTextFieldNivel.setText(nivel);
+            
+            String curso = rs.getString("subnivel");
+            jTextFieldCurso.setText(curso);
+            }
+            rs.close();
+         
+            //bd.cerrar();              
+        } catch (SQLException ex) {
+            System.out.println("Hubo un problema al consultar la base de datos" + ex);
+        }
+    }//GEN-LAST:event_jButtonBuscarModuloActionPerformed
 
-        modulo=buscarmodulo.modulo;
+    public int contarRegistros(){
+        String sentencia = "Select Count(*) From `icba`.`inscripcion` ";
+        ResultSet rs = null;
+        try {
+            rs = bd.consulta(sentencia);
+            rs.next();
+            int cantidad = rs.getInt(1);
+            
+            return cantidad;      
+        } catch (SQLException ex) {
+            Logger.getLogger(EstudianteRegistrar.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return -1;
+    }
+    
+    public boolean verificarPosibleRepeticion(){
+        String sentencia = "Select * From `icba`.`inscripcion` "
+                    + "WHERE idEstudiante = " + idEstudiante + " AND idAsignacion = " + idModulo;
+        ResultSet rs = null;
+        try {
+            rs = bd.consulta(sentencia);
+            if (rs.next())
+                return true;                
+        } catch (SQLException ex) {
+            Logger.getLogger(EstudianteRegistrar.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return false;
+    }
+    
+    public boolean verificarCamposObligatorios(){
+        if (idEstudiante == -1 || idModulo == -1)
+            return true;
+        return false;
+    }
+    
+    public void guardarBaseDatos() {
+        boolean repetido, datosIngresados;
+        int registrosIni, registrosFin;
+              
+        try {           
+            registrosIni = contarRegistros();
+            datosIngresados = verificarCamposObligatorios();
+            
+            if (datosIngresados){
+                JOptionPane.showMessageDialog(null,"Error: No se han ingresado todos los campos obligatorios","Inscripción de Estudiante",JOptionPane.INFORMATION_MESSAGE) ;   
+            }
+            else{
+                repetido = verificarPosibleRepeticion();
+                
+                if (repetido){
+                    JOptionPane.showMessageDialog(null,"Error: El estudiante ya se encuentra inscrito en el modulo","Inscripción de Estudiante",JOptionPane.INFORMATION_MESSAGE) ;          
+                    jTextFieldNombre.requestFocus();
+                } 
+                else{
+                    String sentencia = "INSERT INTO `icba`.`inscripcion` (idEstudiante, idAsignacion) "
+                            + "VALUES ("+idEstudiante+","+idModulo+")";
+                    bd.modificarBD(sentencia);
 
-        
-        costoModulo.setText(String.valueOf(modulo.getCosto()));
-        costoLibroModulo.setText(String.valueOf(modulo.getCostoLibro()));
-        cantidadClases.setText(String.valueOf(modulo.getcantidadClases()));
-        //sub nivel
-        if(modulo.getsubNivel().equals("1"))
-            subNivelModulo.setSelectedIndex(0);
-        if(modulo.getsubNivel().equals("2"))
-            subNivelModulo.setSelectedIndex(1);
-        if(modulo.getsubNivel().equals("3"))
-            subNivelModulo.setSelectedIndex(2);
-        if(modulo.getsubNivel().equals("4"))
-            subNivelModulo.setSelectedIndex(3);
-        if(modulo.getsubNivel().equals("1+"))
-            subNivelModulo.setSelectedIndex(4);
-        if(modulo.getsubNivel().equals("2+"))
-            subNivelModulo.setSelectedIndex(5);
-        if(modulo.getsubNivel().equals("3+"))
-            subNivelModulo.setSelectedIndex(6);
-        if(modulo.getsubNivel().equals("4+"))
-            subNivelModulo.setSelectedIndex(7);
-        //nivel
-        if(modulo.getNivel().equals("A1"))
-            nivelModulo.setSelectedIndex(0);
-        if(modulo.getNivel().equals("A2"))
-            nivelModulo.setSelectedIndex(1);
-        if(modulo.getNivel().equals("B1"))
-            nivelModulo.setSelectedIndex(2);
-        if(modulo.getNivel().equals("B2"))
-            nivelModulo.setSelectedIndex(3);
-        if(modulo.getNivel().equals("C1"))
-            nivelModulo.setSelectedIndex(4);
-            // TIPO MODULO
-       
-        if(modulo.getTipoModulo().equals("CURSO REGULAR"))
-            tipoModulo.setSelectedIndex(0);
-        if(modulo.getTipoModulo().equals("CURSO  EXTENSIVO"))
-            tipoModulo.setSelectedIndex(1);
-        if(modulo.getTipoModulo().equals("CURSO  PARTICULAR"))
-            tipoModulo.setSelectedIndex(2);
-        // tipo (destinado a)
-       
-        if(modulo.gettipo().equals("NIÑOS(Mâuschen)"))
-            destinadoA.setSelectedIndex(0);
-        if(modulo.gettipo().equals("NIÑOS(KiKu)"))
-            destinadoA.setSelectedIndex(1);
-        if(modulo.gettipo().equals("JOVENES"))
-            destinadoA.setSelectedIndex(2);
-        if(modulo.gettipo().equals("ADULTOS"))
-            destinadoA.setSelectedIndex(3);
-        
-        */
-        
-        
-    }//GEN-LAST:event_jButtonBuscarEstudiante1ActionPerformed
+                    registrosFin = contarRegistros();
+
+                    if (registrosIni != registrosFin){
+                        JOptionPane.showMessageDialog(null,"Estudiante inscrito exitosamente","Inscripción de Estudiante",JOptionPane.INFORMATION_MESSAGE) ;
+                        bd.cerrar();
+                        dispose();
+                    }
+                    else
+                        JOptionPane.showMessageDialog(null,"Hubo un error al intentar ingresar los datos a la base de datos","Inscripción de Estudiante",JOptionPane.INFORMATION_MESSAGE) ;           
+                }
+            }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null,"Hubo un error al intentar ingresar los datos a la base de datos","Inscripción de Estudiante",JOptionPane.INFORMATION_MESSAGE) ;
+            System.out.println("Hubo un problema al intentar ingresar los datos a la base de datos" + ex);
+        }
+    }
+    
+    private void jButtonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGuardarActionPerformed
+        guardarBaseDatos();
+    }//GEN-LAST:event_jButtonGuardarActionPerformed
+
+    private void jButtonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelarActionPerformed
+        cerrarVentana();
+    }//GEN-LAST:event_jButtonCancelarActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButtonBuscarEstudiante;
-    private javax.swing.JButton jButtonBuscarEstudiante1;
+    private javax.swing.JButton jButtonBuscarModulo;
+    private javax.swing.JButton jButtonCancelar;
+    private javax.swing.JButton jButtonGuardar;
     private javax.swing.JLabel jLabelApellidoMaterno;
     private javax.swing.JLabel jLabelApellidoMaterno1;
     private javax.swing.JLabel jLabelApellidoMaterno2;
